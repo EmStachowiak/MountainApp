@@ -1,5 +1,6 @@
 package com.example.mountainapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,15 +33,8 @@ public class AddTrip extends AppCompatActivity {
 
 
         Button addTrip = findViewById(R.id.addTrip);
-
-
-
-
         addTrip.setOnClickListener(a -> {
             String name =  mountainName.getText().toString();
-//            finalHeightInt = heightInt;
-//            finalVerticalGainInt = verticalGainInt;
-//            finalDistanceInt = distanceInt;
 
             String height = addHeight.getText().toString();
             int heightInt = 0;
@@ -50,36 +44,62 @@ public class AddTrip extends AppCompatActivity {
 
             String distance= addDistance.getText().toString();
             int distanceInt = 0;
-            if (!height.isEmpty()) {
+            if (!distance.isEmpty()) {
                 distanceInt = Integer.parseInt(distance);
             }
 
             String verticalGain= addVerticalGain.getText().toString();
             int verticalGainInt = 0;
-            if (!height.isEmpty()) {
+            if (!verticalGain.isEmpty()) {
                 verticalGainInt = Integer.parseInt(verticalGain);
             }
 
-
-            mountainList.add(new MountainPeak(name, heightInt, verticalGainInt, distanceInt));
+            MountainPeak newTrip = new MountainPeak(name, heightInt, verticalGainInt, distanceInt);
+            mountainList.add(newTrip);
             updateTripList();
+
+            List<MountainPeak> temporaryList = new ArrayList<>(mountainList);
+            temporaryList.add(newTrip);
+
+            mountainName.setText("");
+            addHeight.setText("");
+            addDistance.setText("");
+            addVerticalGain.setText("");
+
+            mountainList = temporaryList;
+
+
+
         });
 
         displayTrip = findViewById(R.id.displayTrip);
 
 
+        Button back = findViewById(R.id.back);
+        back.setOnClickListener(e -> {
+            Intent intent = new Intent(AddTrip.this, MainActivity.class);
+            intent.putExtra("mountainList", new ArrayList<>(mountainList));
+            //intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
+            startActivity(intent);
+        });
+
 
     }
     private void updateTripList() {
         StringBuilder stringBuilder = new StringBuilder();
-        for (MountainPeak peak : mountainList) {
-            stringBuilder.append("Name: ").append(peak.getMountainPeak()).append("\n");
-            stringBuilder.append("Height: ").append(peak.getHeight()).append("\n");
-            stringBuilder.append("Vertical Gain: ").append(peak.getVerticalGain()).append("\n");
-            stringBuilder.append("Distance: ").append(peak.getDistance()).append("\n");
-        }
-        displayTrip.setText(stringBuilder.toString());
-    }
 
+        if (!mountainList.isEmpty() && mountainList != null) {
+            MountainPeak lastTrip = mountainList.get(mountainList.size() - 1);
+
+            stringBuilder.append("Name: ").append(lastTrip.getMountainPeak()).append("\n");
+            stringBuilder.append("Height: ").append(lastTrip.getHeight()).append("\n");
+            stringBuilder.append("Vertical Gain: ").append(lastTrip.getVerticalGain()).append("\n");
+            stringBuilder.append("Distance: ").append(lastTrip.getDistance()).append("\n");
+        }
+
+        displayTrip.setText(stringBuilder.toString());
+
+
+    }
 
 }

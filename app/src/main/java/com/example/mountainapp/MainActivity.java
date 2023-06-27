@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
         addTrip.setOnClickListener(a -> {
             Intent intent = new Intent(MainActivity.this, AddTrip.class);
+            startActivity(intent);
+        });
+
+        displayAllTrips.setOnClickListener( a -> {
+            Intent intent = new Intent(MainActivity.this, DisplayAllTrips.class);
             startActivity(intent);
         });
 
