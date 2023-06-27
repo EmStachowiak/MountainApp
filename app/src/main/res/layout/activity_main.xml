@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="93dp"
+        android:textColor="#000066"
+        android:fontFamily="@font/zcool_kuaile"
+        android:text="MY MOUNTAIN APP"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="244dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/background2"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <Button
+            android:id="@+id/addTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000066"
+            android:fontFamily="@font/zcool_kuaile"
+            android:text="ADD TRIP" />
+
+        <Button
+            android:id="@+id/displayAllTrips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000066"
+            android:fontFamily="@font/zcool_kuaile"
+            android:text="DISPLAY ALL TRIPS" />
+
+        <Button
+            android:id="@+id/displayRankings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000066"
+            android:fontFamily="@font/zcool_kuaile"
+            android:text="DISPLAY RANKINGS" />
+
+        <Button
+            android:id="@+id/deleteOneTrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000066"
+            android:fontFamily="@font/zcool_kuaile"
+            android:text="DELETE ONE TRIP" />
+
+        <Button
+            android:id="@+id/clearList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000066"
+            android:fontFamily="@font/zcool_kuaile"
+            android:text="CLEAR LIST" />
+
+        <Button
+            android:id="@+id/gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#484848"
+            android:text="MY PHOTO GALLERY" />
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
