@@ -70,6 +70,11 @@ public class AddTrip extends AppCompatActivity {
 
 
 
+//            Intent intent = new Intent();
+//            intent.putExtra("mountainList", new ArrayList<>(mountainList));
+//            //intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
+//            startActivity(intent);
+
         });
 
         displayTrip = findViewById(R.id.displayTrip);
@@ -78,10 +83,11 @@ public class AddTrip extends AppCompatActivity {
         Button back = findViewById(R.id.back);
         back.setOnClickListener(e -> {
             Intent intent = new Intent(AddTrip.this, MainActivity.class);
-            intent.putExtra("mountainList", new ArrayList<>(mountainList));
-            //intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
+            intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
             startActivity(intent);
         });
+
+
 
 
     }
@@ -98,6 +104,8 @@ public class AddTrip extends AppCompatActivity {
         }
 
         displayTrip.setText(stringBuilder.toString());
+
+
 
 
     }

@@ -26,6 +26,7 @@ public class DisplayAllTrips extends AppCompatActivity {
 
 
 
+
         StringBuilder stringBuilder = new StringBuilder();
         if (mountainList != null && !mountainList.isEmpty())  {
             for (MountainPeak peak : mountainList) {

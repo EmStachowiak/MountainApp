@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,8 +32,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+
         displayAllTrips.setOnClickListener( a -> {
+            List<MountainPeak> mountainList = getIntent().getParcelableArrayListExtra("mountainList");
             Intent intent = new Intent(MainActivity.this, DisplayAllTrips.class);
+            intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
             startActivity(intent);
         });
 
