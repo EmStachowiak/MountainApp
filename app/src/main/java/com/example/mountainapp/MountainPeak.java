@@ -16,6 +16,7 @@ public class MountainPeak implements Parcelable, Serializable {
         private int verticalGain;
         private float distance;
         private int idList = 0;
+        private int  numOfTrips =0;
 
 
         public MountainPeak(String mountainPeak, int height, int verticalGain, float distance) {
@@ -25,6 +26,7 @@ public class MountainPeak implements Parcelable, Serializable {
             this.verticalGain = verticalGain;
             this.distance = distance;
             idList = id;
+            numOfTrips = id;
         }
 
     protected MountainPeak(Parcel in) {
@@ -47,12 +49,15 @@ public class MountainPeak implements Parcelable, Serializable {
         }
     };
 
-    public int getId() {
+         public int getId() {
             return id;
         }
 
+    public int getIdList() {
+        return idList;
+    }
 
-        public String getMountainPeak() {
+    public String getMountainPeak() {
             return mountainPeak;
         }
 
@@ -73,12 +78,14 @@ public class MountainPeak implements Parcelable, Serializable {
             return distance;
         }
 
+    public int getNumOfTrips() {
+        return numOfTrips;
+    }
 
 
-
-        @Override
+    @Override
         public String toString() {
-            return "com.example.mountainapp.MainActivity.MountainPeak[" +
+            return "MOUNTAIN PEAK " +
                     "id=" + id +
                     ", mountainPeak='" + mountainPeak + '\'' +
                     ", height=" + height +

@@ -13,12 +13,13 @@ import java.util.List;
 
 public class AddTrip extends AppCompatActivity {
 
-    EditText mountainName;
-    EditText addHeight;
-    EditText addVerticalGain;
-    EditText addDistance;
+    private EditText mountainName;
+    private EditText addHeight;
+    private EditText addVerticalGain;
+    private EditText addDistance;
     public List<MountainPeak> mountainList = new ArrayList<>();
-    TextView displayTrip;
+    public TextView displayTrip;
+    private MountainList mountainApp = MountainList.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,29 +56,27 @@ public class AddTrip extends AppCompatActivity {
             }
 
             MountainPeak newTrip = new MountainPeak(name, heightInt, verticalGainInt, distanceInt);
-            mountainList.add(newTrip);
-            updateTripList();
-
-            List<MountainPeak> temporaryList = new ArrayList<>(mountainList);
-            temporaryList.add(newTrip);
-
-            mountainName.setText("");
-            addHeight.setText("");
-            addDistance.setText("");
-            addVerticalGain.setText("");
-
-            mountainList = temporaryList;
 
 
+                mountainList.add(newTrip);
+                mountainApp.addMountain(newTrip);
+                updateTripList();
 
-//            Intent intent = new Intent();
-//            intent.putExtra("mountainList", new ArrayList<>(mountainList));
-//            //intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
-//            startActivity(intent);
+                List<MountainPeak> temporaryList = new ArrayList<>(mountainList);
+                temporaryList.add(newTrip);
+
+                mountainName.setText("");
+                addHeight.setText("");
+                addDistance.setText("");
+                addVerticalGain.setText("");
+
+                mountainList = temporaryList;
+
 
         });
 
         displayTrip = findViewById(R.id.displayTrip);
+
 
 
         Button back = findViewById(R.id.back);
@@ -93,9 +92,10 @@ public class AddTrip extends AppCompatActivity {
     }
     private void updateTripList() {
         StringBuilder stringBuilder = new StringBuilder();
+        MountainPeak lastTrip = mountainList.get(mountainList.size() - 1);
 
         if (!mountainList.isEmpty() && mountainList != null) {
-            MountainPeak lastTrip = mountainList.get(mountainList.size() - 1);
+
 
             stringBuilder.append("Name: ").append(lastTrip.getMountainPeak()).append("\n");
             stringBuilder.append("Height: ").append(lastTrip.getHeight()).append("\n");
@@ -103,7 +103,14 @@ public class AddTrip extends AppCompatActivity {
             stringBuilder.append("Distance: ").append(lastTrip.getDistance()).append("\n");
         }
 
-        displayTrip.setText(stringBuilder.toString());
+        if ( !(lastTrip.getMountainPeak() == null) && !(lastTrip.getHeight() == 0)
+                && !(lastTrip.getVerticalGain() == 0) && !(lastTrip.getDistance() == 0)) {
+            displayTrip.setText(stringBuilder.toString());
+        } else {
+            displayTrip.setText("Data cannot be empty, \nplease try again!");
+        }
+
+
 
 
 

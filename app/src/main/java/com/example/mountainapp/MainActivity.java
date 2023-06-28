@@ -6,14 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
-
+    MountainList mountainList = MountainList.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +36,23 @@ public class MainActivity extends AppCompatActivity {
         displayAllTrips.setOnClickListener( a -> {
             List<MountainPeak> mountainList = getIntent().getParcelableArrayListExtra("mountainList");
             Intent intent = new Intent(MainActivity.this, DisplayAllTrips.class);
-            intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
+
+            //intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
+            startActivity(intent);
+        });
+
+        displayRankings.setOnClickListener( a -> {
+            Intent intent = new Intent(MainActivity.this, DisplayRankings.class);
             startActivity(intent);
         });
 
 
 
+        clearList.setOnClickListener( a -> {
+            mountainList.clearMountainList();
+            Toast.makeText(MainActivity.this,
+                    "You cleared the whole list, \nyou have to go to the mountains!", Toast.LENGTH_SHORT).show();
+        });
 
 
 

@@ -12,6 +12,7 @@ import java.util.List;
 public class DisplayAllTrips extends AppCompatActivity {
 
     TextView displayTrip;
+    MountainList mountainApp = MountainList.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,8 @@ public class DisplayAllTrips extends AppCompatActivity {
         setContentView(R.layout.activity_displayalltrips);
 
         //List<MountainPeak> mountainList = getIntent().getParcelableExtra("mountainList");
-        List<MountainPeak> mountainList = getIntent().getParcelableArrayListExtra("mountainList");
-
+        //List<MountainPeak> mountainList = getIntent().getParcelableArrayListExtra("mountainList");
+        List<MountainPeak> mountainList = mountainApp.getMountainList();
 
         displayTrip = findViewById(R.id.displayTrip);
 
@@ -37,7 +38,7 @@ public class DisplayAllTrips extends AppCompatActivity {
                 stringBuilder.append("-------------------").append("\n");
             }
         } else {
-            stringBuilder.append("The list is empty! Go to the mountains!");
+            stringBuilder.append("The list is empty! \n Go to the mountains!");
             }
 
             displayTrip.setText(stringBuilder.toString());
