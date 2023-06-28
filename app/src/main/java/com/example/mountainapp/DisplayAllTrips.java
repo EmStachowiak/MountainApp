@@ -19,13 +19,9 @@ public class DisplayAllTrips extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_displayalltrips);
 
-        //List<MountainPeak> mountainList = getIntent().getParcelableExtra("mountainList");
-        //List<MountainPeak> mountainList = getIntent().getParcelableArrayListExtra("mountainList");
         List<MountainPeak> mountainList = mountainApp.getMountainList();
 
         displayTrip = findViewById(R.id.displayTrip);
-
-
 
 
         StringBuilder stringBuilder = new StringBuilder();
@@ -43,10 +39,6 @@ public class DisplayAllTrips extends AppCompatActivity {
             }
 
             displayTrip.setText(stringBuilder.toString());
-
-
-
-
 
 
             Button back = findViewById(R.id.back);

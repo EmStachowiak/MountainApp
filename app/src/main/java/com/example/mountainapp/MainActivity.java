@@ -54,6 +54,11 @@ public class MainActivity extends AppCompatActivity {
                     "You cleared the whole list, \nyou have to go to the mountains!", Toast.LENGTH_SHORT).show();
         });
 
+        deleteOneTrip.setOnClickListener( a -> {
+            Intent intent = new Intent(MainActivity.this, DeleteOneTrip.class);
+            startActivity(intent);
+        });
+
 
 
 

@@ -135,9 +135,9 @@ public class DisplayRankings extends AppCompatActivity {
         textView.setText("The number of peaks climbed: " +  MountainPeak.getNumOfTrips() + "\n"
                 + "The sum of the mountain elevations covered: " + sumVerticalGain + " meters" + "\n"
                 + "The sum of the kilometers traveled: " + (String.format("%.2f", sumDistance) + " kilometers") + "\n"
-                + "---------------------------------------------------------------------" + "\n"+ "Three highest peaks: " + "\n" + builderHighest.toString() + "\n"
-                + "---------------------------------------------------------------------" + "\n" + "The three peaks with the \nhighest elevation gain of the route: " + "\n" + builderVertGains.toString()
-                + "---------------------------------------------------------------------" + "\n" + "Three peaks with the longest route distance: " + "\n" + builderDistances.toString()
+                + "---------------------------------------------------------------------" + "\n"+ "The highest peaks: " + "\n" + builderHighest.toString() + "\n"
+                + "---------------------------------------------------------------------" + "\n" + "Peaks with the \nhighest elevation gain of the route: " + "\n" + builderVertGains.toString()
+                + "---------------------------------------------------------------------" + "\n" + "Peaks with the longest route distance: " + "\n" + builderDistances.toString()
 
                 );
 
