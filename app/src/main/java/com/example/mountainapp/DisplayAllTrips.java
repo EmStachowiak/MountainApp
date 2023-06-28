@@ -31,6 +31,7 @@ public class DisplayAllTrips extends AppCompatActivity {
         StringBuilder stringBuilder = new StringBuilder();
         if (mountainList != null && !mountainList.isEmpty())  {
             for (MountainPeak peak : mountainList) {
+                stringBuilder.append("ID: ").append(peak.getIdList()).append("\n");
                 stringBuilder.append("Name: ").append(peak.getMountainPeak()).append("\n");
                 stringBuilder.append("Height: ").append(peak.getHeight()).append("\n");
                 stringBuilder.append("Vertical Gain: ").append(peak.getVerticalGain()).append("\n");

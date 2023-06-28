@@ -16,7 +16,7 @@ public class MountainPeak implements Parcelable, Serializable {
         private int verticalGain;
         private float distance;
         private int idList = 0;
-        private int  numOfTrips =0;
+        private static int  numOfTrips =0;
 
 
         public MountainPeak(String mountainPeak, int height, int verticalGain, float distance) {
@@ -78,7 +78,7 @@ public class MountainPeak implements Parcelable, Serializable {
             return distance;
         }
 
-    public int getNumOfTrips() {
+    public static int getNumOfTrips() {
         return numOfTrips;
     }
 

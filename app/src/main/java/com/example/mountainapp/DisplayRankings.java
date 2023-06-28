@@ -27,7 +27,39 @@ public class DisplayRankings extends AppCompatActivity {
 
        List<MountainPeak> mountainList = mountainApp.getMountainList();
 
-        StringBuilder stringBuilder = new StringBuilder();
+        int sumVerticalGain = mountainList.stream().collect(Collectors.summingInt(MountainPeak::getVerticalGain));
+        double sumDistance = mountainList.stream().collect(Collectors.summingDouble(s -> s.getDistance()));
+
+
+
+        StringBuilder builderDiff = new StringBuilder();
+        if (mountainList != null && !mountainList.isEmpty())  {
+
+            List<MountainPeak> mostDifficultTrip  = mountainList.stream()
+                    .sorted(Comparator.comparingInt(MountainPeak::getVerticalGain)
+                            .thenComparingDouble(MountainPeak::getDistance)
+                            .thenComparingInt(MountainPeak::getHeight)
+                            .reversed())
+                    .limit(1)
+                    .collect(Collectors.toList());
+
+
+            for (MountainPeak peak : mostDifficultTrip) {
+
+                builderDiff.append("ID: ").append(peak.getIdList()).append("\n");
+                builderDiff.append("Name: ").append(peak.getMountainPeak()).append("\n");
+                builderDiff.append("Height: ").append(peak.getHeight()).append("\n");
+                builderDiff.append("Vertical Gain: ").append(peak.getVerticalGain()).append("\n");
+                builderDiff.append("Distance: ").append(peak.getDistance()).append("\n");
+                builderDiff.append("-------------------").append("\n");
+
+            }
+        }
+
+
+
+
+        StringBuilder builderHighest = new StringBuilder();
         if (mountainList != null && !mountainList.isEmpty())  {
 
             List<MountainPeak> listHighestPeaks = mountainList.stream()
@@ -38,19 +70,76 @@ public class DisplayRankings extends AppCompatActivity {
 
             for (MountainPeak peak : listHighestPeaks) {
 
-                stringBuilder.append("ID: ").append(peak.getIdList()).append("\n");
-                stringBuilder.append("Name: ").append(peak.getMountainPeak()).append("\n");
-                stringBuilder.append("Height: ").append(peak.getHeight()).append("\n");
-                stringBuilder.append("Vertical Gain: ").append(peak.getVerticalGain()).append("\n");
-                stringBuilder.append("Distance: ").append(peak.getDistance()).append("\n");
-                stringBuilder.append("-------------------").append("\n");
+                builderHighest.append("ID: ").append(peak.getIdList()).append("\n");
+                builderHighest.append("Name: ").append(peak.getMountainPeak()).append("\n");
+                builderHighest.append("Height: ").append(peak.getHeight()).append("\n");
+                builderHighest.append("Vertical Gain: ").append(peak.getVerticalGain()).append("\n");
+                builderHighest.append("Distance: ").append(peak.getDistance()).append("\n");
+                builderHighest.append("-------------------").append("\n");
 
             }
-        } else {
-            stringBuilder.append("The list is empty! \n Go to the mountains!");
         }
 
-        textView.setText(stringBuilder.toString());
+
+        StringBuilder builderVertGains = new StringBuilder();
+        if (mountainList != null && !mountainList.isEmpty())  {
+
+            List<MountainPeak> listGreatestVerticalGains  = mountainList.stream()
+                    .sorted(Comparator.comparingInt(MountainPeak::getVerticalGain).reversed())
+                    .limit(3)
+                    .collect(Collectors.toList());
+
+
+            for (MountainPeak peak : listGreatestVerticalGains ) {
+
+                builderVertGains.append("ID: ").append(peak.getIdList()).append("\n");
+                builderVertGains.append("Name: ").append(peak.getMountainPeak()).append("\n");
+                builderVertGains.append("Height: ").append(peak.getHeight()).append("\n");
+                builderVertGains.append("Vertical Gain: ").append(peak.getVerticalGain()).append("\n");
+                builderVertGains.append("Distance: ").append(peak.getDistance()).append("\n");
+                builderVertGains.append("-------------------").append("\n");
+
+            }
+        }
+
+
+
+
+        StringBuilder builderDistances = new StringBuilder();
+        if (mountainList != null && !mountainList.isEmpty())  {
+
+            List<MountainPeak> listGreatestDistances  = mountainList.stream()
+                    .sorted(Comparator.comparingDouble(MountainPeak::getDistance).reversed())
+                    .limit(3)
+                    .collect(Collectors.toList());
+
+
+            for (MountainPeak peak : listGreatestDistances ) {
+
+                builderDistances.append("ID: ").append(peak.getIdList()).append("\n");
+                builderDistances.append("Name: ").append(peak.getMountainPeak()).append("\n");
+                builderDistances.append("Height: ").append(peak.getHeight()).append("\n");
+                builderDistances.append("Vertical Gain: ").append(peak.getVerticalGain()).append("\n");
+                builderDistances.append("Distance: ").append(peak.getDistance()).append("\n");
+                builderDistances.append("-------------------").append("\n");
+
+            }
+        }
+
+
+
+
+
+
+
+        textView.setText("The number of peaks climbed: " +  MountainPeak.getNumOfTrips() + "\n"
+                + "The sum of the mountain elevations covered: " + sumVerticalGain + " meters" + "\n"
+                + "The sum of the kilometers traveled: " + (String.format("%.2f", sumDistance) + " kilometers") + "\n"
+                + "---------------------------------------------------------------------" + "\n"+ "Three highest peaks: " + "\n" + builderHighest.toString() + "\n"
+                + "---------------------------------------------------------------------" + "\n" + "The three peaks with the \nhighest elevation gain of the route: " + "\n" + builderVertGains.toString()
+                + "---------------------------------------------------------------------" + "\n" + "Three peaks with the longest route distance: " + "\n" + builderDistances.toString()
+
+                );
 
 
 
