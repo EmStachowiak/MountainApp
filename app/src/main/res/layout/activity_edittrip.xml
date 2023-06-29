@@ -101,29 +101,69 @@
     </TableLayout>
 
 
-
-
-
-
-
-
-
     <LinearLayout
+        android:id="@+id/editLayout"
         android:layout_width="409dp"
-        android:layout_height="200dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="296dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
 
 
+        <TextView
+            android:id="@+id/textViewEdit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
 
-    <TextView
-        android:id="@+id/textViewEdit"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/white"
-        android:textSize="13sp" />
+        <EditText
+            android:id="@+id/editNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter Name"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
+        <EditText
+            android:id="@+id/editHeightEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter Height"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />/>
+
+        <EditText
+            android:id="@+id/editVerticalGainEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter Vertical Gain"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/editDistanceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Enter Distance"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <Button
+            android:id="@+id/updateButton"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="UPDATE" />
 
     </LinearLayout>
 

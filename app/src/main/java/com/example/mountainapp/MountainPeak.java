@@ -83,6 +83,22 @@ public class MountainPeak implements Parcelable, Serializable {
     }
 
 
+    public void setMountainPeak(String mountainPeak) {
+        this.mountainPeak = mountainPeak;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setVerticalGain(int verticalGain) {
+        this.verticalGain = verticalGain;
+    }
+
+    public void setDistance(float distance) {
+        this.distance = distance;
+    }
+
     @Override
         public String toString() {
             return "MOUNTAIN PEAK " +

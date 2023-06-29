@@ -101,7 +101,7 @@
             style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PLAN  YOUR  NEXT TRIP!" />
+            android:text="PLAN  YOUR  NEXT  TRIP!   &#x2764;" />
 
     </LinearLayout>
 

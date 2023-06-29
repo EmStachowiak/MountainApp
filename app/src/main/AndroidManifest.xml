@@ -16,6 +16,7 @@
         <activity android:name=".DisplayAllTrips"/>
         <activity android:name=".DisplayRankings"/>
         <activity android:name=".ClearList"/>
+        <activity android:name=".DeleteOneTrip"/>
         <activity android:name=".EditTrip"/>
 
         <activity

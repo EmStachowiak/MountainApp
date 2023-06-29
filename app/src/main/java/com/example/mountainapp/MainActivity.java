@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        edit.setOnClickListener( a -> {
+            Intent intent = new Intent(MainActivity.this, EditTrip.class);
+            startActivity(intent);
+        });
+
 
         displayAllTrips.setOnClickListener( a -> {
             List<MountainPeak> mountainList = getIntent().getParcelableArrayListExtra("mountainList");
@@ -44,17 +49,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        edit.setOnClickListener( a -> {
-                Intent intent = new Intent(MainActivity.this, EditTrip.class);
-                startActivity(intent);
-        });
-
-
-        clearList.setOnClickListener( a -> {
-          Intent intent = new Intent(MainActivity.this, ClearList.class);
-          startActivity(intent);
-        });
-
 
 
         deleteOneTrip.setOnClickListener( a -> {
@@ -63,7 +57,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+        clearList.setOnClickListener( a -> {
+            Intent intent = new Intent(MainActivity.this, ClearList.class);
+            startActivity(intent);
+        });
 
 
 
