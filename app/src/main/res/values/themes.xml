@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.MountainApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">#000066</item>
-        <item name="android:navigationBarColor">#000066</item>
+         <item name="colorPrimary">#0C4680</item>
+        <item name="android:navigationBarColor">#0C4680</item>
     </style>
 
     <style name="Theme.MountainApp" parent="Base.Theme.MountainApp" />

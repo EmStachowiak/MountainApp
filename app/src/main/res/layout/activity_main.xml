@@ -7,24 +7,33 @@
     android:background="@drawable/background2"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="74dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/logoo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
     <TextView
         android:id="@+id/textView"
+        style="@style/MainTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="93dp"
-        style="@style/MainTextStyle"
-        android:text="MY MOUNTAIN APP"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="MY \nMOUNTAIN \nAPP"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="409dp"
-        android:layout_height="350dp"
+        android:layout_height="420dp"
         android:layout_marginTop="244dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/background2"
@@ -33,51 +42,68 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.753">
 
         <Button
             android:id="@+id/addTrip"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="ADD  TRIP" />
+
+        <Button
+            android:id="@+id/edit"
             style="@style/ButtonStyle"
-            android:text="ADD TRIP" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EDIT  TRIP" />
 
         <Button
             android:id="@+id/displayAllTrips"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle"
-            android:text="DISPLAY ALL TRIPS" />
+            android:text="DISPLAY  ALL  TRIPS" />
 
         <Button
             android:id="@+id/displayRankings"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle"
-            android:text="DISPLAY RANKINGS" />
+            android:text="DISPLAY  RANKINGS" />
+
 
         <Button
             android:id="@+id/deleteOneTrip"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle"
-            android:text="DELETE ONE TRIP" />
+            android:text="DELETE  ONE  TRIP" />
 
         <Button
             android:id="@+id/clearList"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle"
-            android:text="CLEAR LIST" />
+            android:text="CLEAR  LIST" />
+
 
         <Button
             android:id="@+id/gallery"
+            style="@style/ButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/ButtonStyle"
-            android:text="MY PHOTO GALLERY" />
-    </LinearLayout>
+            android:text="MY  PHOTO  GALLERY" />
 
+        <Button
+            android:id="@+id/nextTrip"
+            style="@style/ButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PLAN  YOUR  NEXT TRIP!" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
