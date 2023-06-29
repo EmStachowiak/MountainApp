@@ -36,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
         displayAllTrips.setOnClickListener( a -> {
             List<MountainPeak> mountainList = getIntent().getParcelableArrayListExtra("mountainList");
             Intent intent = new Intent(MainActivity.this, DisplayAllTrips.class);
-
-            //intent.putParcelableArrayListExtra("mountainList", new ArrayList<>(mountainList));
             startActivity(intent);
         });
 
@@ -49,10 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         clearList.setOnClickListener( a -> {
-            mountainList.clearMountainList();
-            Toast.makeText(MainActivity.this,
-                    "You cleared the whole list, \nyou have to go to the mountains!", Toast.LENGTH_SHORT).show();
+          Intent intent = new Intent(MainActivity.this, ClearList.class);
+          startActivity(intent);
         });
+
+
 
         deleteOneTrip.setOnClickListener( a -> {
             Intent intent = new Intent(MainActivity.this, DeleteOneTrip.class);

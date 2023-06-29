@@ -14,11 +14,8 @@
         android:layout_marginStart="70dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="93dp"
-        android:textColor="#000066"
-        android:fontFamily="@font/zcool_kuaile"
+        style="@style/MainTextStyle"
         android:text="MY MOUNTAIN APP"
-        android:textSize="35sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.382"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,47 +39,42 @@
             android:id="@+id/addTrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000066"
-            android:fontFamily="@font/zcool_kuaile"
+            style="@style/ButtonStyle"
             android:text="ADD TRIP" />
 
         <Button
             android:id="@+id/displayAllTrips"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000066"
-            android:fontFamily="@font/zcool_kuaile"
+            style="@style/ButtonStyle"
             android:text="DISPLAY ALL TRIPS" />
 
         <Button
             android:id="@+id/displayRankings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000066"
-            android:fontFamily="@font/zcool_kuaile"
+            style="@style/ButtonStyle"
             android:text="DISPLAY RANKINGS" />
 
         <Button
             android:id="@+id/deleteOneTrip"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000066"
-            android:fontFamily="@font/zcool_kuaile"
+            style="@style/ButtonStyle"
             android:text="DELETE ONE TRIP" />
 
         <Button
             android:id="@+id/clearList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#000066"
-            android:fontFamily="@font/zcool_kuaile"
+            style="@style/ButtonStyle"
             android:text="CLEAR LIST" />
 
         <Button
             android:id="@+id/gallery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#484848"
+            style="@style/ButtonStyle"
             android:text="MY PHOTO GALLERY" />
     </LinearLayout>
 
