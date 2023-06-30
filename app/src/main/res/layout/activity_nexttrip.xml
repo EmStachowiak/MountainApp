@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background2"
+    android:id="@+id/next">
+
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/MainTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="63dp"
+        android:text="WHERE TO \nNEXT TRIP?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:checkedButton="@+id/easyTrip">
+
+        <LinearLayout
+            android:id="@+id/group1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/withChildren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:fontFamily="@font/zcool_kuaile"
+                android:text="WITH CHILDREN "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="162dp" />
+
+
+            <RadioButton
+                android:id="@+id/easyTrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:fontFamily="@font/zcool_kuaile"
+                android:text="EASY TRIP "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="209dp"
+                tools:layout_editor_absoluteY="162dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mediumDiff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:fontFamily="@font/zcool_kuaile"
+                android:text="MEDIUM DIFFICULTY "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="232dp"
+                />
+
+            <RadioButton
+                android:id="@+id/difficult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:fontFamily="@font/zcool_kuaile"
+                android:text="DIFFICULT TRIP "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="216dp"
+                tools:layout_editor_absoluteY="232dp" />
+        </LinearLayout>
+
+    </RadioGroup>
+
+
+
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="380dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:checkedButton="@+id/tatraMountain">
+
+        <LinearLayout
+            android:id="@+id/group3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/tatraMountain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:fontFamily="@font/zcool_kuaile"
+                android:text="TATRA MOUNTAIN "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="53dp"
+                tools:layout_editor_absoluteY="162dp" />
+
+
+            <RadioButton
+                android:id="@+id/sudetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:fontFamily="@font/zcool_kuaile"
+                android:text="SUDETES "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="209dp"
+                tools:layout_editor_absoluteY="162dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/bieszczady"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:fontFamily="@font/zcool_kuaile"
+                android:text="BIESZCZADY "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="27dp"
+                tools:layout_editor_absoluteY="232dp" />
+
+            <RadioButton
+                android:id="@+id/silesianBeskids"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/white"
+                android:fontFamily="@font/zcool_kuaile"
+                android:text="SILESIAN BESKIDS "
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="216dp"
+                tools:layout_editor_absoluteY="232dp" />
+
+        </LinearLayout>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/back"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

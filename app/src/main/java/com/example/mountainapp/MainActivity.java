@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Button deleteOneTrip = findViewById(R.id.deleteOneTrip);
         Button clearList = findViewById(R.id.clearList);
         Button edit = findViewById(R.id.edit);
+        Button nextTrip = findViewById(R.id.nextTrip);
 
         addTrip.setOnClickListener(a -> {
             Intent intent = new Intent(MainActivity.this, AddTrip.class);
@@ -61,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, ClearList.class);
             startActivity(intent);
         });
+
+        nextTrip.setOnClickListener(a-> {
+            Intent intent = new Intent(MainActivity.this, NextTrip.class);
+            startActivity(intent);
+        });
+
 
 
 

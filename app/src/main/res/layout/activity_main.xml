@@ -9,41 +9,46 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="74dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="9dp"
+        android:layout_width="94dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="601dp"
         android:src="@drawable/logoo"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
         style="@style/MainTextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="104dp"
         android:gravity="center"
         android:text="MY \nMOUNTAIN \nAPP"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="409dp"
         android:layout_height="420dp"
-        android:layout_marginTop="244dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/background2"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.753">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/addTrip"

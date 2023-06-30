@@ -129,9 +129,6 @@ public class DisplayRankings extends AppCompatActivity {
 
 
 
-
-
-
         textView.setText("The number of peaks climbed: " +  MountainPeak.getNumOfTrips() + "\n"
                 + "The sum of the mountain elevations covered: " + sumVerticalGain + " meters" + "\n"
                 + "The sum of the kilometers traveled: " + (String.format("%.2f", sumDistance) + " kilometers") + "\n"

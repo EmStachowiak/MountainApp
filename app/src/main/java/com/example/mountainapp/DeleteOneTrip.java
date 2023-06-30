@@ -62,7 +62,6 @@ public class DeleteOneTrip extends AppCompatActivity {
                 for (MountainPeak peak : mountainList) {
                     if (peak.getMountainPeak().equals(peakToDelete)) {
                         deletedPeak = peak;
-                        //mountainList.remove(peak.getMountainPeak().equals(name));
                         mountainList.remove(deletedPeak);
                         deleteText.setText("You have deleted the trip: " + "\n" +peakToDelete);
                         break;

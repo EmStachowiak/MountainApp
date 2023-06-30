@@ -20,7 +20,7 @@ public class ClearList extends AppCompatActivity {
         clearList.setOnClickListener(a -> {
             mountainList.clearMountainList();
             Toast.makeText(ClearList.this,
-                    "You cleared the whole list, \nyou have to go to the mountains!", Toast.LENGTH_SHORT).show();
+                    "You cleared the entired list, \nyou have to go to the mountains!", Toast.LENGTH_SHORT).show();
         });
 
 

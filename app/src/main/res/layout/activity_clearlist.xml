@@ -14,7 +14,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginBottom="62dp"
         style="@style/MainTextStyle"
-        android:text="DELETE WHOLE LIST"
+        android:text="DELETE ENTIRE LIST"
         app:layout_constraintBottom_toTopOf="@+id/sure"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
