@@ -2,8 +2,11 @@
 - AndroidStudio, Java
 
 Application that tracks mountain trips.
+
 Adds tours, edits, deletes individual tours or entire lists.
+
 Displays a list of rankings (highest peaks, longest distances, highest vertical gain, the hardest trip of all, as well as the sum of all the kilometers, vertical gains, distance in kilometers).
+
 PS. The application is under development, so there are still some bugs to fix, including the English translation ;)
 
 
