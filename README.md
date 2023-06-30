@@ -1,11 +1,10 @@
 # MountainApp
 - AndroidStudio, Java
 
-- Application tracking our mountain trips.
-- Adds tours, edits, deletes individual tours or the entire list.
-- Displays a list, rankings (highest peaks, longest distances, highest vertical gain, hardest trip of all, as well as the sum of all kilometers, vertical gains, kilometers of distance).
-
-- PS. Application under development. Still some bugs to fix, including English language ;)
+Application that tracks mountain trips.
+Adds tours, edits, deletes individual tours or entire lists.
+Displays a list of rankings (highest peaks, longest distances, highest vertical gain, the hardest trip of all, as well as the sum of all the kilometers, vertical gains, distance in kilometers).
+PS. The application is under development, so there are still some bugs to fix, including the English translation ;)
 
 
 ![image](https://github.com/EmStachowiak/MountainApp/assets/107054955/0decb97d-2cca-475f-ac92-346c686c8ed0)
