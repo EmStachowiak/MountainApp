@@ -1,5 +1,5 @@
 # MountainApp
-- AndroidStudio, Java (photos)
+- AndroidStudio, Java 
 
 Application that tracks mountain trips.
 
